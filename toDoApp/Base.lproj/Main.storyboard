@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UdX-BF-2h0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--To Do App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="To Do App" id="BYZ-38-t0r" customClass="ViewController" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-zX-rD4">
+                                <rect key="frame" x="158" y="351" width="79" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99893753679999997" green="0.6849785196" blue="0.99826968000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DETAİL"/>
+                                <connections>
+                                    <action selector="detailButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NOS-Si-QtN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="To Do App" id="xl0-yE-TpR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="HzV-iC-Evm">
+                            <color key="tintColor" red="0.99893753679999997" green="0.6849785196" blue="0.99826968000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="84a-8h-IDl" kind="show" id="IT3-IH-QmR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="VkB-ze-ZQn" kind="show" identifier="detail" id="Y8o-sQ-lgD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Add To Do-->
+        <scene sceneID="L9d-ff-5rf">
+            <objects>
+                <viewController storyboardIdentifier="AddToDo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="84a-8h-IDl" customClass="AddToDo" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DYu-MA-hBS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-FK-PAC">
+                                <rect key="frame" x="16" y="293" width="361" height="45.666666666666686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99893753679999997" green="0.79889809300000003" blue="0.86250526530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Do" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7r6-Ge-T7Z">
+                                <rect key="frame" x="16" y="366" width="361" height="45.666666666666686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99893753679999997" green="0.79889809300000003" blue="0.86250526530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxR-w1-DEe">
+                                <rect key="frame" x="165" y="483" width="64" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99893753679999997" green="0.6849785196" blue="0.99826968000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="EKLE"/>
+                                <connections>
+                                    <action selector="ekleButton:" destination="84a-8h-IDl" eventType="touchUpInside" id="Boc-Jh-EsR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V5G-Lr-g4c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qfs-Me-EgH"/>
+                    <connections>
+                        <outlet property="tfTitle" destination="czQ-FK-PAC" id="Fwq-4r-zGv"/>
+                        <outlet property="tfToDo" destination="7r6-Ge-T7Z" id="lR6-wy-Pp0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3Z-sN-JfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710.6870229007634" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="q4Y-Sk-U8u">
+            <objects>
+                <viewController id="VkB-ze-ZQn" customClass="Detail" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RV7-yd-Tid">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Do" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-RY-6NL">
+                                <rect key="frame" x="16" y="373" width="361" height="45.666666666666686"/>
+                                <color key="backgroundColor" red="0.99893753679999997" green="0.79889809300000003" blue="0.86250526530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9H-CQ-wG1">
+                                <rect key="frame" x="141" y="470" width="111" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99893753679999997" green="0.6849785196" blue="0.99826968000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GÜNCELLE"/>
+                                <connections>
+                                    <action selector="guncelleButton:" destination="VkB-ze-ZQn" eventType="touchUpInside" id="R5L-24-Qld"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVc-Ov-yC3">
+                                <rect key="frame" x="16" y="290" width="361" height="45.666666666666686"/>
+                                <color key="backgroundColor" red="0.99893753679999997" green="0.79889809300000003" blue="0.86250526530000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Heb-tj-uES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bVc-Ov-yC3" firstAttribute="leading" secondItem="Heb-tj-uES" secondAttribute="leading" constant="16" id="09v-dF-8AY"/>
+                            <constraint firstItem="7IU-RY-6NL" firstAttribute="top" secondItem="bVc-Ov-yC3" secondAttribute="bottom" constant="37.329999999999998" id="Mcs-cQ-QKr"/>
+                            <constraint firstItem="7IU-RY-6NL" firstAttribute="leading" secondItem="Heb-tj-uES" secondAttribute="leading" constant="16" id="dD7-cn-gLH"/>
+                            <constraint firstItem="bVc-Ov-yC3" firstAttribute="top" secondItem="Heb-tj-uES" secondAttribute="top" constant="187" id="ppl-av-rzI"/>
+                            <constraint firstItem="Heb-tj-uES" firstAttribute="trailing" secondItem="bVc-Ov-yC3" secondAttribute="trailing" constant="16" id="xVM-x9-hYL"/>
+                            <constraint firstItem="Heb-tj-uES" firstAttribute="trailing" secondItem="7IU-RY-6NL" secondAttribute="trailing" constant="16" id="yw9-6b-CuJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5iW-nW-dMf"/>
+                    <connections>
+                        <outlet property="tfTitle" destination="bVc-Ov-yC3" id="QzM-x4-0lW"/>
+                        <outlet property="tfToDo" destination="7IU-RY-6NL" id="Eay-Cd-mB9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PT-aJ-cRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2369" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Eh-Mp-rBj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UdX-BF-2h0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aHG-Up-Qbm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ckv-8Z-g10"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRN-D3-jAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
